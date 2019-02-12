@@ -7,6 +7,10 @@
 // console.log(favFood);
 
 
+/*************************************************
+ * Coding Challenge 1
+ */
+
 // var markMass, johnMass;
 // markMass = 72;
 // johnMass = 90;
@@ -25,7 +29,7 @@
 // console.log("Is Mark's BMI higher than John's? " + result);
 
 
-/**********************
+/*************************************************
  * if / else statements
  */
 
@@ -69,7 +73,7 @@
 // }
 
 
-/**********************
+/*************************************************
  * Boolean logic
  */
 
@@ -87,7 +91,7 @@ if (age < 13) {
 }
 
 
-/**********************
+/*************************************************
  * Ternary Operator
  */
 
@@ -100,7 +104,8 @@ age > 22 ? console.log(firstName + ' drinks beer.')
 var drink = age > 22 ? 'beer' : 'lemonade';
 console.log(drink);
 
-/**********************
+
+/*************************************************
  * Switch Statements
  */
 
@@ -118,4 +123,30 @@ switch (job) {
         break;
     default:
         console.log(firstName + ' does something else.');
+}
+
+
+/*************************************************
+ * Truthy and Falsy Values
+ */
+
+// falsy values: undefined, null, 0, '', NaN
+// truthy values: NOT falsy values
+
+var height;
+height = 23;
+
+if (height || height === 0) {
+    console.log('Variable is defined');
+} else {
+    console.log('Variable has NOT been defined');
+}
+
+
+/*************************************************
+ * Equality Operators
+ */
+
+if (height == '23') {
+    console.log('The == operator does type coercion!');
 }

@@ -150,3 +150,31 @@ if (height || height === 0) {
 if (height == '23') {
     console.log('The == operator does type coercion!');
 }
+
+/*************************************************
+ * Coding Challenge 2
+ */
+
+var scoresJohn = [89,120,103];
+var scoresMike = [116,94,123];
+var scoresMary = [97,134,105];
+
+var arr = [];
+var sum = 0;
+function findAvg (arr) {
+    sum = arr[0] + arr[1] +arr[2];
+    avg = sum / 3;
+    console.log(avg);
+}
+
+var avgJohn = findAvg(scoresJohn);
+var avgMike = findAvg(scoresMike);
+var avgMary = findAvg(scoresMary);
+
+if (avgJohn > avgMike && avgJohn > avgMary) {
+    console.log("John has the highest average score.")
+} else if (avgMike > avgJohn && avgMike > avgMary) {
+    console.log("Mike has the highest average score.")
+} else if (avgMary > avgJohn && avgMary > avgMike) {
+    console.log("Mary has the highest average score.")
+}

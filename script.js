@@ -151,6 +151,7 @@ if (height == '23') {
     console.log('The == operator does type coercion!');
 }
 
+
 /*************************************************
  * Coding Challenge 2
  */
@@ -164,7 +165,7 @@ var sum = 0;
 function findAvg (arr) {
     sum = arr[0] + arr[1] +arr[2];
     avg = sum / 3;
-    console.log(avg);
+    return avg;
 }
 
 var avgJohn = findAvg(scoresJohn);
@@ -172,9 +173,41 @@ var avgMike = findAvg(scoresMike);
 var avgMary = findAvg(scoresMary);
 
 if (avgJohn > avgMike && avgJohn > avgMary) {
-    console.log("John has the highest average score.")
+    console.log("John has the highest average score.");
 } else if (avgMike > avgJohn && avgMike > avgMary) {
     console.log("Mike has the highest average score.")
 } else if (avgMary > avgJohn && avgMary > avgMike) {
     console.log("Mary has the highest average score.")
+} else {
+    console.log("Looks like there's a three-way tie.")
 }
+
+
+/*************************************************
+ * Functions
+ */
+
+function calculateAge(birthYear) {
+    return 2019 - birthYear;
+}
+
+var ageNauman = calculateAge(1988);
+var ageShehzad = calculateAge(1993);
+var ageAsad = calculateAge(1976);
+
+console.log(ageNauman, ageShehzad, ageAsad);
+
+function yearsUntilRetirement(year, firstName) {
+    var age = calculateAge(year);
+    var retirement = 65 - age;
+
+    if (retirement > 0) {
+    console.log(firstName + ' retires in ' + retirement + ' years.')
+    } else {
+        console.log(firstName + ' is already retired.')
+    }
+}
+
+yearsUntilRetirement(1988, 'Nauman');
+yearsUntilRetirement(1993, 'Shehzad');
+yearsUntilRetirement(1976, 'Asad');

@@ -186,7 +186,7 @@ if (avgJohn > avgMike && avgJohn > avgMary) {
 /*************************************************
  * Functions
  */
-
+/*
 function calculateAge(birthYear) {
     return 2019 - birthYear;
 }
@@ -211,3 +211,63 @@ function yearsUntilRetirement(year, firstName) {
 yearsUntilRetirement(1988, 'Nauman');
 yearsUntilRetirement(1993, 'Shehzad');
 yearsUntilRetirement(1976, 'Asad');
+*/
+
+/*************************************************
+ * Function Statements and Expressions
+ */
+
+// Function declaration
+// function whatDoYouDo(job, firstName) {}
+
+// Function Expression
+var whatDoYouDo = function(job, firstName) {
+    switch(job) {
+        case 'teacher':
+            return firstName + ' teaches kids how to code';
+        case 'driver':
+            return firstName + ' drives an Uber around Chicago';
+        case 'designer':
+            return firstName + ' designs beautiful websites';
+        default:
+            return firstName + ' does something else';
+    }
+}
+
+console.log(whatDoYouDo('technician', 'Nauman'));
+console.log(whatDoYouDo('engineer', 'Shehzad'));
+console.log(whatDoYouDo('teacher', 'Asad'));
+
+
+/*************************************************
+ * Arrays
+ */
+
+// Initialize new array
+var names = ['John', 'Mark', 'Jane'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names[0]);
+console.log(names.length);
+
+// Mutate array data
+names[1] = 'Nauman';
+names[names.length] = 'Mary';
+console.log(names);
+
+// Different data types
+var john = ['John', 'Smith', 1990, 'teacher', false];
+
+john.push('blue');
+john.unshift('Mr.');
+console.log(john);
+
+john.pop();
+john.pop();
+john.shift();
+console.log(john);
+
+console.log(john.indexOf(1990));
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John IS NOT a designer' : 'John IS a designer';
+console.log(isDesigner);

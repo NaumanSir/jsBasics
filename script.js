@@ -271,3 +271,9 @@ console.log(john.indexOf(1990));
 
 var isDesigner = john.indexOf('designer') === -1 ? 'John IS NOT a designer' : 'John IS a designer';
 console.log(isDesigner);
+
+
+/*************************************************
+ * Coding Challenge 3
+ */
+

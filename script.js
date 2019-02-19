@@ -277,18 +277,21 @@ console.log(isDesigner);
  * Coding Challenge 3
  */
 
-var arr = [];
-function restaurantTips (arr) {
-    for (var i=0; i<arr.length; i++) {
-        if (arr[i] < 50) {
-            tip = arr[i] * .2
-        } else if (arr[i] > 50 && arr[i] < 200) {
-            tip = arr[i] * .15
-        } else {
-            tip = arr[i] * .1
-        }
-    }
-    return tip;
-};
+// var arr = [];
+// function restaurantTips (arr) {
+//     for (var i=0; i<arr.length; i++) {
+//         if (arr[i] < 50) {
+//             tip = arr[i] * .2
+//         } else if (arr[i] > 50 && arr[i] < 200) {
+//             tip = arr[i] * .15
+//         } else {
+//             tip = arr[i] * .1
+//         }
+//     }
+//     return tip;
+// };
 
-console.log(restaurantTips ([124, 48, 268]));
+// console.log(restaurantTips ([124, 48, 268]));
+
+/* ^above didn't work */
+

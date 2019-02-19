@@ -295,3 +295,58 @@ console.log(isDesigner);
 
 /* ^above didn't work */
 
+function tipCalculator(bill) {
+    var percentage;
+    if (bill < 50) {
+        percentage = .2;
+    } else if (bill >= 50 && bill < 200) {
+        percentage = .15;
+    } else {
+        percentage = .1;
+    }
+    return percentage * bill;
+}
+
+var bills = [124, 48, 268];
+var tips = [tipCalculator(bills[0]),
+            tipCalculator(bills[1]),
+            tipCalculator(bills[2])]
+
+var finalValues = [bills[0] + tips[0],
+                   bills[1] + tips[1],
+                   bills[2] + tips[2],]
+
+console.log(tips, finalValues);
+// console.log(finalValues);
+
+
+/*************************************************
+ * Objects and properties
+ */
+
+// Object literal
+var batman = {
+    firstName: 'Bruce',
+    lastName: 'Wayne',
+    birthYear: 1939,
+    entourage: ['Robin', 'Alfred', 'Batgirl', 'Nightwing'],
+    job: 'crimefighter',
+    isMarried: false
+};
+
+console.log(batman);
+console.log(batman.entourage);
+console.log(batman['job']);
+var x = 'birthYear';
+console.log(batman[x]);
+
+batman.job = 'superhero';
+batman['isMarried'] = true;
+console.log(batman);
+
+// new Object syntax
+var talia = new Object();
+talia.firstName = 'Talia';
+talia.birthYear = 1971;
+talia['lastName'] = 'al-Ghul';
+console.log(talia);

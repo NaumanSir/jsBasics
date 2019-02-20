@@ -350,3 +350,31 @@ talia.firstName = 'Talia';
 talia.birthYear = 1971;
 talia['lastName'] = 'al-Ghul';
 console.log(talia);
+
+
+/*************************************************
+ * Objects and methods
+ */
+
+var batman = {
+    firstName: 'Bruce',
+    lastName: 'Wayne',
+    birthYear: 1939,
+    entourage: ['Robin', 'Alfred', 'Batgirl', 'Nightwing'],
+    job: 'crimefighter',
+    isMarried: false,
+    // 'this' keyword
+    calcAge: function() {
+        // return 2019 - this.birthYear;
+        this.age = 2019 - this.birthYear;
+    }
+};
+
+// console.log(batman.calcAge());
+batman.calcAge();
+console.log(batman);
+
+
+/*************************************************
+ * Coding Challenge 4
+ */

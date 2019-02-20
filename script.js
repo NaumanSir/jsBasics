@@ -378,3 +378,55 @@ console.log(batman);
 /*************************************************
  * Coding Challenge 4
  */
+
+// var markMass, johnMass;
+// markMass = 72;
+// johnMass = 90;
+
+// var markHeight, johnHeight;
+// markHeight = 1.73;
+// johnHeight = 1.81;
+
+// var markBMI = markMass / (markHeight * markHeight);
+// console.log(markBMI);
+// var johnBMI = johnMass / (johnHeight * johnHeight);
+// console.log(johnBMI);
+
+// var result = markBMI > johnBMI;
+
+// console.log("Is Mark's BMI higher than John's? " + result);
+
+
+var mark = {
+    name: 'Mark',
+    mass: 72,
+    height: 1.73,
+    calcBMI: function() {
+        this.bmi = this.mass / (this.height * this.height);
+    }
+}
+
+mark.calcBMI();
+console.log(mark);
+
+
+var john = {
+    name: 'John',
+    mass: 90,
+    height: 1.81,
+    calcBMI: function() {
+        this.bmi = this.mass / (this.height * this.height);
+    }
+}
+
+john.calcBMI();
+console.log(john);
+
+
+if (mark.bmi > john.bmi) {
+    console.log("Mark\'s BMI is greater than that of John\'s.")
+} else if (mark.bmi < john.bmi) {
+    console.log("John\'s BMI is greater than that of Mark\'s.")
+} else {
+    console.log("Mark and John have the same BMI.")
+}
